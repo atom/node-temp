@@ -24,10 +24,10 @@ Installation
 
 Install it using [npm](http://github.com/isaacs/npm):
 
-    $ npm install temp
+    $ npm install @atom/temp
 
 Or get it directly from:
-http://github.com/bruce/node-temp
+http://github.com/atom/node-temp
 
 Synopsis
 --------
@@ -58,7 +58,7 @@ temporary file is chmod'd `0600` and cleaned up automatically when the
 process at exit (because `temp.track()` is called):
 
 ```javascript
-var temp = require('temp'),
+var temp = require('@atom/temp'),
     fs   = require('fs'),
     util  = require('util'),
     exec = require('child_process').exec;
@@ -90,7 +90,7 @@ on exit, you must call `track()`. The `track()` function is chainable,
 and it's recommended that you call it when requiring the module.
 
 ```javascript
-var temp = require("temp").track();
+var temp = require("@atom/temp").track();
 ```
 
 Why is this necessary? In pre-0.6 versions of temp, tracking was
@@ -137,7 +137,7 @@ files, the temporary directory is removed automatically at exit (because
 `temp.track()` is called):
 
 ```javascript
-var temp = require('temp'),
+var temp = require('@atom/temp'),
     fs   = require('fs'),
     util = require('util'),
     path = require('path'),
@@ -173,7 +173,7 @@ on top of `fs.createWriteStream`. The return value is a
 `temp.cleanup` is called (because `temp.track()` is called).
 
 ```javascript
-var temp = require('temp');
+var temp = require('@atom/temp');
 
 // Automatically track and cleanup files at exit
 temp.track();
@@ -210,7 +210,7 @@ a `.pdf` extension, and close it.
 
 ```javascript
 var fs   = require('fs'),
-    temp = require('temp');
+    temp = require('@atom/temp');
 
 fs.readFile('/path/to/source.pdf', function(err, data) {
   temp.open({suffix: '.pdf'}, function(err, info) {
@@ -247,7 +247,7 @@ use `async()` in your Gruntfile:
 
 ```javascript
 module.exports = function (grunt) {
-  var temp = require("temp");
+  var temp = require("@atom/temp");
   temp.track(); // Cleanup files, please
   grunt.registerTask("temptest", "Testing temp", function() {
 
