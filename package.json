@@ -1,5 +1,5 @@
 {
-  "name": "temp",
+  "name": "@atom/temp",
   "description": "Temporary files and directories",
   "tags": [
     "temporary",
@@ -36,7 +36,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/bruce/node-temp.git"
+    "url": "git://github.com/atom/node-temp.git"
   },
   "scripts": {
     "test": "node test/temp-test.js"
