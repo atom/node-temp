@@ -14,7 +14,7 @@ Node.js Compatibility
 
 Supports v0.10.0+.
 
-[![Build Status](https://travis-ci.org/atom/node-temp.png)](https://travis-ci.org/atom/node-temp)
+[![Build Status](https://travis-ci.org/atom/node-temp.svg)](https://travis-ci.org/atom/node-temp)
 
 Please let me know if you have problems running it on a later version of Node.js or
 have platform-specific problems.
